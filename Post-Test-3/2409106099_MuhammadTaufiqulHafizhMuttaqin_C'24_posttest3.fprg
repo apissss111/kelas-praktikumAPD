@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="posttest 3"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-23 11:38:10 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtN0hMQkEzTE07MjAyNC0wOS0yMDswNTozMzo0NCBQTTsyNjQ1"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtN0hMQkEzTE07MjAyNC0wOS0yMzsxMTozODoxMCBQTTs0OzI3NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hargatiket, uang" type="Real" array="False" size=""/>
+            <declare name="nama, hari" type="String" array="False" size=""/>
+            <output expression="&quot;masukan nama anda&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;Masukkan hari&quot;" newline="True"/>
+            <input variable="hari"/>
+            <if expression="hari == &quot;senin&quot; OR hari == &quot;selasa&quot; OR hari == &quot;rabu&quot; OR hari == &quot;kamis&quot;">
+                <then>
+                    <assign variable="hargatiket" expression="40000"/>
+                    <output expression="&quot;harga tiket: &quot;&amp; hargatiket" newline="True"/>
+                    <output expression="&quot;masukan uang&quot;" newline="True"/>
+                    <input variable="uang"/>
+                    <if expression="uang &lt; hargatiket">
+                        <then>
+                            <output expression="&quot;uang yang anda masukan tidak cukup&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="nama" newline="True"/>
+                            <output expression="&quot;anda membeli pada hari &quot;&amp; hari &amp; &quot;, dengan harga: &quot;&amp; hargatiket" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="hari == &quot;jumat&quot;">
+                        <then>
+                            <assign variable="hargatiket" expression="45000"/>
+                            <output expression="&quot;harga tiket: &quot;&amp; hargatiket" newline="True"/>
+                            <input variable="uang"/>
+                            <if expression="uang &lt; hargatiket">
+                                <then>
+                                    <output expression="&quot;uang yang anda masukan tidak cukup&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="nama" newline="True"/>
+                                    <output expression="&quot;anda membeli pada hari &quot;&amp; hari &amp; &quot;, dengan harga: &quot;&amp; hargatiket" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="hari == &quot;sabtu&quot;">
+                                <then>
+                                    <assign variable="hargatiket" expression="55000"/>
+                                    <output expression="&quot;harga tiket: &quot;&amp; hargatiket" newline="True"/>
+                                    <input variable="uang"/>
+                                    <if expression="uang &lt; hargatiket">
+                                        <then>
+                                            <output expression="&quot;uang yang anda masukan tidak cukup&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="nama" newline="True"/>
+                                            <output expression="&quot;anda membeli pada hari &quot;&amp; hari &amp; &quot;, dengan harga: &quot;&amp; hargatiket" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="hari == &quot;minggu&quot;">
+                                        <then>
+                                            <assign variable="hargatiket" expression="60000"/>
+                                            <output expression="&quot;harga tiket: &quot;&amp; hargatiket" newline="True"/>
+                                            <input variable="uang"/>
+                                            <if expression="uang &lt; hargatiket">
+                                                <then>
+                                                    <output expression="&quot;uang yang anda masukan tidak cukup&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="nama" newline="True"/>
+                                                    <output expression="&quot;anda membeli pada hari &quot;&amp; hari &amp; &quot;, dengan harga: &quot;&amp; hargatiket" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="nama" newline="True"/>
+                                            <output expression="&quot;tidak falid, mohon memasukan hari yang benar&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
